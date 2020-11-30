@@ -1,6 +1,6 @@
 {
     "app_name": "My Cool App",
-    "project_slug": "{{ cookiecutter.app_name.lower()|replace(' ', '') }}",
+    "package_name": "{{ cookiecutter.app_name.lower()|replace(' ', '') }}",
     "version": "0.1.0",
     "author": "Leodanis Pozo Ramos",
     "email": "{{ cookiecutter.author.lower()|replace(' ', '.') }}@example.com",
