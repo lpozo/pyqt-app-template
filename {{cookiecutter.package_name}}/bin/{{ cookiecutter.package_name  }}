@@ -3,7 +3,7 @@
 
 """This module provides {{ cookiecutter.app_name }} entry point script."""
 
-from src.app import main
+from {{ cookiecutter.package_name }}.app import main
 
 if __name__ == "__main__":
     main()
