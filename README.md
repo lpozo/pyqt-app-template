@@ -14,9 +14,9 @@ Install the requirements:
 ```sh
 $ pip install cookiecutter
 ```
+
 Create the application:
 
 ```sh
 $ cookiecutter https://github.com/lpozo/pyqt-app-template
 ```
-
