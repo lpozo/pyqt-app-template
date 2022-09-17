@@ -1,14 +1,14 @@
 # {{ cookiecutter.app_name }}
 
-*Add a project description...*
+*Add a project description here...*
 
 ## Installation
 
-*Add install instructions...*
+*Add installation instructions here...*
 
 ## Usage
 
-*Add running instructions...*
+*Add usage instructions here...*
 
 ## About the Author
 
@@ -19,4 +19,4 @@ GitHub: {{ cookiecutter.github_user }}
 
 ## License
 
-Distributed under the MIT license. See `LICENSE` for more information.
+Distributed under the MIT license. See `LICENSE` for more details.

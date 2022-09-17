@@ -1,8 +1,8 @@
 """This module provides {{ cookiecutter.app_name }} main window."""
 
-from PyQt5.QtWidgets import QAction, QMainWindow, QMessageBox, QVBoxLayout, QWidget
-
-from {{cookiecutter.package_name}}.model.model import Model
+from PyQt6.QtGui import QAction
+from PyQt6.QtWidgets import QMainWindow, QMessageBox, QVBoxLayout, QWidget
+from {{cookiecutter.package_name}}.core import Model
 
 
 class Window(QMainWindow):
@@ -10,10 +10,9 @@ class Window(QMainWindow):
         super().__init__(parent)
         self.setWindowTitle("{{ cookiecutter.app_name }}")
         self.setupUI()
-        # Model to access and modify data
         self.mode = Model()
 
-    # GUI (View)
+    # View
     def setupUI(self):
         self._createCentralWidget()
         self._createActions()
@@ -22,14 +21,16 @@ class Window(QMainWindow):
         self._createStatusBar()
 
     def _createCentralWidget(self):
-        # Add a central widget, the following is just a placeholder...
-        self.centralWidget = QWidget()
+        centralWidget = QWidget()
+        self.setCentralWidget(centralWidget)
         self.mainLayout = QVBoxLayout()
-        self.centralWidget.setLayout(self.mainLayout)
+        centralWidget.setLayout(self.mainLayout)
+        # Add widgets to your gui here...
 
     def _createActions(self):
         self.exitAction = QAction("&Exit", self)
         self.aboutAction = QAction("About...", self)
+        # Add more actions here...
 
     def _connectActions(self):
         self.exitAction.triggered.connect(self.close)
@@ -41,17 +42,17 @@ class Window(QMainWindow):
         # File menu
         fileMenu = mainMenuBar.addMenu("&File")
         fileMenu.addAction(self.exitAction)
+        # Add more menus here...
         # Help menu
         helpMenu = mainMenuBar.addMenu("&Help")
         helpMenu.addAction(self.aboutAction)
-        # Add more menus here...
 
     def _createStatusBar(self):
         self.statusbar = self.statusBar()
-        # Temporary message
-        self.statusbar.showMessage("Ready", 3000)
+        # Set up your status bar here...
+        self.statusbar.showMessage("Ready", 3000)  # Placeholder message
 
-    # Slots (Controller)
+    # Controller
     def about(self):
         QMessageBox.about(
             self,
