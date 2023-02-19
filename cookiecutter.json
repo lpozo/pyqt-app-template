@@ -1,8 +1,8 @@
 {
-    "app_name": "My Cool App",
+    "app_name": "My Cool PyQt GUI App",
     "package_name": "{{ cookiecutter.app_name.lower()|replace(' ', '') }}",
     "version": "0.1.0",
-    "author": "Leodanis Pozo Ramos",
+    "author": "Your Name",
     "email": "{{ cookiecutter.author.lower()|replace(' ', '.') }}@example.com",
     "twitter_handle": "{{ cookiecutter.author.lower()|replace(' ', '') }}",
     "github_user": "{{ cookiecutter.author.lower()|replace(' ', '') }}"

@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 """This module provides {{ cookiecutter.app_name }} entry-point script."""
 
-from gui.app import main
+from {{ cookiecutter.app_name }}.app import main
 
 __version__ = "{{ cookiecutter.version }}"
 
